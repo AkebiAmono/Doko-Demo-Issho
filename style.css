@@ -1,0 +1,193 @@
+:root {
+    --darkpink: #de7c90;
+    --black: #46413e;
+    --cream: #d9c2b5;
+    --coolpink: #e4afbb;
+    --bg: HSL(300, 20%, 99%);}
+  
+  * {margin: 0;
+    padding: 0;
+    box-sizing: border-box;}
+  
+  body {font-family: 'montserrat', sans-serif;
+    background-color: var(--bg);
+    color: var(--darkpink);
+    display: flex;
+    flex-direction: column;
+    min-height: 2200px;}
+  
+  h1 {font-family: 'DM Serif Display', serif;
+    color: var(--black);}
+  
+  h2 {font-family: 'DM Serif Display', serif;
+    color: var(--cream);
+    text-align: left !important;}
+  
+  h3 {font-family: 'DM Serif Display', serif;
+    color: var(--black);}
+  
+  p {font-family: 'Poppins', serif;
+    color: var(--black);
+    margin: 0rem;}
+  
+  
+  /*BIODATA*/
+  .biodata {display: grid;
+    grid-template-columns: max-content auto;
+    gap: 8px 16px;}
+  
+  .biodata dt {font-weight: bold; color:var(--black); font-size: 15px;}
+  
+  .biodata dd {margin-left: 0; color:var(--black); font-size: 15px;}
+  
+  /* Navbar */
+  .navbar {display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.4rem 7%;
+    background-color: var(--bg);
+    border-bottom: 1px solid var(--coolpink);
+    position: fixed;
+    box-shadow: 0px 7px 20px #545454;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;}
+  
+  .navbar .navbar-logo {font-size: 2rem;
+    font-family: 'Fraunces-Display';
+    font-weight: 800;
+    color: var(--darkpink);
+    text-decoration: none;}
+  
+  .navbar .navbar-links a {
+    color: var(--darkpink);
+    font-size: 1.3rem;
+    margin: 0 1rem;
+    position: relative;
+    text-decoration: none;}
+  
+  .navbar .navbar-links a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: var(--darkpink);
+    transition: width 0.3s ease-in-out;
+    position: absolute;
+    bottom: -2px;
+    left: 0;}
+  
+  .navbar .navbar-links a:hover::after {
+    width: 100%;}
+  
+  .navbar .navbar-extra a {
+    color: var(--darkpink);
+    margin: 0 0.5rem;
+    text-decoration: none;}
+  
+  .navbar .navbar-extra a:hover {color: var(--darkpink);}
+  
+  @media (max-width: 768px) {
+    .navbar .navbar-links {
+      display: none;
+      position: absolute;
+      right: 0;
+      top: 100%;
+      width: 200px;
+      background-color: var(--bg);
+      box-shadow: 0px 7px 20px #545454;
+      z-index: 1;}
+  
+    .navbar .navbar-links.active {
+      display: block;
+  }
+  
+    .navbar #menu {
+      display: block;
+    }
+  }
+  /*NAVBAR END*/
+  
+  /*HERO SECTION*/
+  #menu {display: none;}
+  
+  .header { padding-top: 180px;
+           padding-bottom: 150px;
+           padding-left: 40px;
+           padding-right: 40px;
+           background-image: url(DDI\ valentine\ together.png);
+           background-size: cover;
+           background-position: center;
+           position: relative;
+           background-repeat: no-repeat;}
+  
+  .header .header-head{
+    text-align: center;
+    color: var(--darkpink);
+    font-size: 40px;
+    text-shadow: 2px 2px 3px var(--bg), 0 0 50px var(--bg), 0 0 25px white ;}
+  
+  .header .header-extra{
+    text-align: center;
+    color: var(--darkpink);
+    font-size: 30px;
+    text-shadow: 2px 2px 3px var(--bg), 0 0 50px var(--bg), 0 0 25px white ;}
+  /*HERO SECTION END*/
+  
+  /*HOME SECTION*/
+  .home {padding: 10rem 7% 1.4rem;}
+  .home h1{text-align: center;
+          font-size: 33px;}
+  .home h2{font-size: 23px;
+           padding-top: 30px;
+          padding-left: 10rem}
+  .home p{font-size: 15px;
+         padding-top: 1.3rem;
+         padding-right: 45rem;}
+  /*HOME SECTION END*/ 
+  
+  
+  /*FOOTER START*/
+  footer{
+  background-color: var(--black);
+  text-align: center;
+  padding:2px 2px 0px 0px; /* Padding untuk memberikan ruang di dalam footer */
+  margin-top: 3rem;}
+  
+  footer .socials{
+    padding: 1rem 0;
+  }
+  
+  footer .socials a {
+    color: var(--cream);
+    margin: 1rem;
+  }
+  
+  footer .links a {
+    color: var(--cream);
+    margin: 0.5rem; 
+    text-decoration: none;
+    font-size: 1rem;}
+  /*FOOTER END*/
+  
+  
+  /*Media Queris*/
+  
+  /*Laptop*/
+  @media (max-width: 1366px) {
+    html {
+      font-size: 75%;
+    }
+   }
+  
+  /*Tablet*/
+  @media (max-width: 768px) {
+    html {font-size: 62.5%;}
+    #menu {display: block;}
+  }
+  
+  /*Mobile Phone*/
+  @media (max-width: 450px) {
+    html {font-size: 55%;}
+  }
